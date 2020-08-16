@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songdew_Form</title>
+    <link rel="stylesheet" type="text/css" href="sondew_assignment.css">
+  <script type="text/javascript">
+     function validation(){
+
+      var name = document.getElementById("name");
+      var email = document.getElementById("Email");
+
+      if(name.value.trim()=="")
+      {
+
+        
+        name.style.border = "solid 3px red";
+        document.getElementById("name_vis").style.visibility="visible" ;
+;        return false;
+
+      }
+
+       else if (email.value.trim()=="") {
+
+        alert("blank email address");
+
+        return false;
+
+       }
+       else {
+
+        return true;
+       }
+ }
+
+  </script>
+</head>
+<body>
+  <div id="headline">
+     <H3>Drop us a message</H3>
+  </div>
+
+ 
+    <form onsubmit="return validation();">
+      <div id="outer_box">
+
+        <div id="box1">
+                
+               <div class="box1.1">
+               Name:
+               <br><br>
+                
+               <input name="Username" id="name" placeholder="Name" type="text"><br><br>
+               <label  id="name_vis" style="color: red; visibility: hidden;"  for="name">INVALID</label>
+               </div>
+
+               <div class="box1.1">
+                User Email:
+               <br><br>
+                <label for="Email"></label>
+                   <input type="email" id="Email" placeholder="type your Email Id"><br><br>
+               </div>
+         </div>
+
+         <div id="box2">
+          <label for="message"></label>
+             <input type="text" id="message" placeholder="Type us your message here">
+
+         </div>
+         <br><br>
+
+         <div id="box3">
+           <button type="submit" id="button"> Send Message</button>
+         </div>
+
+         </div>
+        
+    </form>
+
+    
+
+</body>
+</html>
